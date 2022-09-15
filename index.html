@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ahorcado</title>        
+        <link rel="stylesheet" href="reset.css">
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img class="logo" src="imagenes/Vector.svg" alt="logo alaura"></h1>
+            </div>
+        </header>
+        <main>
+            <section class="principal">
+                <div class="botones">
+                    <canvas id="panelDibujo" width="1200" height="1000"></canvas>
+                    <canvas id="munheco" width="900" height="600"></canvas>
+                    <button id="btniniciar" class="iniciarjuego" onclick="iniciar()"><a>Iniciar Juego</a></button>
+                    <button id="btnnueva" class="nuevapalabra"><a>Agregar una nueva palabra</a></button>
+                </div>
+            </section>
+            <section id="juegoid" class="juegoiniciado">
+                <div class="botonespartida">
+                    <button id="nuevojuegoid" class="nuevojuego" onclick="iniciar()"><a>Nuevo Juego</a></button>
+                    <button id="desistirid" class="desistir" onclick="rendirse()"><a>Desistir</a></button>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="ahorcado.js"></script>
+</html>

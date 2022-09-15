@@ -1,0 +1,106 @@
+.caja{
+    width: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+body{
+    background-color: rgb(99, 124, 236);
+}
+
+.munheco{
+    position: relative;
+    display: flex;
+}
+
+.iniciarjuego{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 5px;
+    margin-top: -10%;
+    margin-left: -3%;
+    position: absolute;
+    width: 317px;
+    height: 114px;
+    left: 561px;
+    top: 402px;
+    background: radial-gradient(rgb(140, 223, 140), black);
+    border-radius: 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.iniciarjuego a{
+    margin-top: 8%;
+    margin-left: 28%;
+}
+
+.nuevapalabra{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    margin-top: -10%;
+    margin-left: -3%;
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    left: 579px;
+    top: 554px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.nuevapalabra a{
+    margin-left: 10%;
+}
+
+.botonespartida{
+    visibility: hidden;
+}
+.nuevojuego{
+    display: inline;
+    align-items: center;
+    padding: 24px;
+    gap: 5px;
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    left: 400px;
+    top: 450px;
+    background: radial-gradient(rgb(140, 223, 140), black);
+    border-radius: 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desistir{
+    display: inline;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    left: 750px;
+    top: 450px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: bold;
+}
