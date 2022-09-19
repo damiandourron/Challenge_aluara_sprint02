@@ -13,6 +13,25 @@ color = "rgb(99, 124, 236)";
 var pantalla = document.getElementById('panelDibujo');
 var pincel = pantalla.getContext('2d');
 
+function mostrarVictoria(resultado){
+    var labelresultado = document.getElementById("label-resultado");
+
+    switch(resultado){
+        case 'victoria':
+            labelresultado.color = "green";
+            labelresultado.textContent = "Ganaste";
+            labelresultado.style.visibility = "visible";
+            break;
+        case 'derrota':
+            labelresultado.textContent = "Perdiste";
+            labelresultado.color = "Red";
+            labelresultado.style.visibility = "visible";
+            break;
+        default:
+            document.getElementById("label-resultado").style.visibility = "hidden";
+            break;
+    }
+}
 function limpiarVariables(){
     palabra = "";
     letraspresionadaincorrecta = [];
@@ -143,6 +162,7 @@ function sortearPalabra(){
 }
 
 function jugar(){
+    mostrarVictoria();
     limpiarVariables();
     sortearPalabra();
     color = "black";
@@ -194,7 +214,8 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true,palabra.length);
                     }
-                    alert("Ganaste, la palabra era: " + palabra);
+
+                    mostrarVictoria("victoria");
                     recibir = false;
                     return;
                 }
@@ -220,7 +241,8 @@ function recibirLetras(letra){
                     for(var i = 0; i<palabra.length; i++){
                         dibujarLetras(palabra[i],i,true);  
                     }
-                    alert("Perdiste, la palabra era: " + palabra);
+
+                    mostrarVictoria('derrota');
                     recibir = false;
                     return;
                 } 
@@ -279,8 +301,7 @@ function iniciar(){
 }
 
 function rendirse(){
-    var pantalla = document.getElementById('panelDibujo');
-    var pincel = pantalla.getContext('2d');
+    mostrarVictoria();
     pincel.clearRect(0,0,1200,1000);
     document.getElementById("btniniciar").style.visibility = "visible";
     document.getElementById("btnnueva").style.visibility = "visible";
